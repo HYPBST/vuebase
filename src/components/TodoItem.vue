@@ -27,7 +27,7 @@ export default {
         },
         Save(){
             this.edit=false
-            this.emit('todo-item-changed',{
+            this.$emit('todo-item-changed',{
                 original:this.title,
                 new:this.text
             })
