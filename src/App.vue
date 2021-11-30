@@ -1,16 +1,31 @@
 <template>
   <div id="app">
-    <todo/>
+    <Todo :todos="todos"/>
   </div>
 </template>
 
 <script>
-import todo from './components/Todo.vue'
+import Todo from './components/Todo.vue'
 
 export default {
   name: 'App',
   components: {
-    todo
+    Todo
+  },
+  data() {
+    return {
+      todos: [
+        {
+          title: 'Első teendő'
+        },
+        {
+          title: 'Második teendő'
+        },
+        {
+          title: 'Harmadik teendő'
+        },
+        ]
+    }
   }
 }
 </script>
